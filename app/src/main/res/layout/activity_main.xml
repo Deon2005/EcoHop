@@ -16,34 +16,56 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageButton
+        android:id="@+id/recenter_btn"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/oval_background"
+        android:contentDescription="Recenter on my location"
+        android:elevation="4dp"
+        android:src="@android:drawable/ic_menu_mylocation"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@drawable/rect1"
-        android:padding="20dp"
+        android:background="@android:color/transparent"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
         android:gravity="center_horizontal"
+        android:elevation="4dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         >
-        <EditText
+        <AutoCompleteTextView
             android:id="@+id/source_et"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/roundrect1"
-            android:layout_margin="5dp"
-            android:padding="5sp"
+            android:layout_height="50dp"
+            android:background="@drawable/translucent_pill_background"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
             android:hint="Where Should we start ?"
             android:visibility="gone"/>
 
-        <EditText
+        <AutoCompleteTextView
             android:id="@+id/destination_et"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/roundrect1"
-            android:layout_margin="5dp"
-            android:padding="5sp"
+            android:layout_height="50dp"
+            android:background="@drawable/translucent_pill_background"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:hint="Where Should we take u ?"/>
 
         <androidx.appcompat.widget.AppCompatButton
@@ -56,6 +78,7 @@
             android:textColor="@color/white"
             android:background="@drawable/rect2"
             android:padding="10dp"
+            android:layout_marginTop="10dp"
             />
     </LinearLayout>
 
