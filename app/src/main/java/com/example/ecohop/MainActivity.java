@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
     private Runnable workRunnable;
 
 
+    @RequiresApi(api = Build.VERSION_CODES.Q)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
