@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
             String destination= destination_et.getText().toString().trim();
             if (!source.isEmpty() && !destination.isEmpty()) {
                 // Both fields are filled
-                showChoosePlanScreen();
+                showTravelingScreen();
             } else {
                 // At least one field is empty
                 Toast.makeText(this, "Please fill both you start and end point", Toast.LENGTH_SHORT).show();
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // ---------------- CHOOSE PLAN SCREEN ----------------
-    private void showChoosePlanScreen() {
+    /*private void showChoosePlanScreen() {
         setContentView(R.layout.choose_plan);
         TextView fullplan = findViewById(R.id.full_plan);
         fullplan.setText(this.complete_plan);
@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
                 showTravelingScreen();
             });
         }
-    }
+    }*/
 
     // ---------------- TRAVELING SCREEN ----------------
     private void showTravelingScreen() {
@@ -119,7 +119,9 @@ public class MainActivity extends AppCompatActivity {
 
         ImageButton back2 = findViewById(R.id.back2); // back button in traveling
         if (back2 != null) {
-            back2.setOnClickListener(v -> showChoosePlanScreen());
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                back2.setOnClickListener(v -> showSearchScreen());
+            }
         }
 
         Button donebtn = findViewById(R.id.donebtn);
