@@ -32,10 +32,10 @@ public class MainActivity extends AppCompatActivity {
 
     private Handler handler = new Handler(Looper.getMainLooper());
     private Runnable workRunnable;
-    private String choosenplan;
+    //private String choosenplan;
     String source= "";
     String destination= "";
-    String complete_plan= "Plans will be displayed here........";
+    //String complete_plan= "Plans will be displayed here........";
     String detailed_plan="Detailed plan will be displayed here.............";
 
     @RequiresApi(api = Build.VERSION_CODES.Q)
