@@ -2,14 +2,10 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
 
-    <!-- Fill color -->
-    <solid android:color="#00BFA5" /> <!-- Change to your desired color -->
-
-    <!-- Rounded corners -->
-    <corners
-        android:topLeftRadius="30dp"
-        android:topRightRadius="30dp"
-        android:bottomLeftRadius="0dp"
-        android:bottomRightRadius="0dp" />
+    <!-- Gradient background -->
+    <gradient
+        android:startColor="#43cea2"
+        android:endColor="#185a9d"
+        android:angle="270" /> <!-- 270 = top→bottom -->
 
 </shape>
