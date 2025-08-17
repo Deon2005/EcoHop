@@ -6,6 +6,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/rect1">
 
+    <ImageButton
+        android:id="@+id/back1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/translucent_pill_background"
+        android:padding="10dp"
+        android:src="@drawable/back_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
@@ -17,6 +29,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
+            android:id="@+id/full_plan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -45,20 +58,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/translucent_pill_background"
-            android:text="Plan 1" />
+            android:text="Plan 1"
+            android:id="@+id/plan1"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:background="@drawable/translucent_pill_background"
-            android:text="Plan 2" />
+            android:text="Plan 2"
+            android:id="@+id/plan2"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/translucent_pill_background"
-            android:text="Plan 3" />
+            android:text="Plan 3"
+            android:id="@+id/plan3"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
